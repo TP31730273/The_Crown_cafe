@@ -1,0 +1,511 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>the Crown cafe</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- cursor -->
+  
+  <!-- this is nav section -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+      <h1 class="logo me-auto">the Crown cafe</h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link active" href="#welcome">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
+          <li><a class="nav-link" href="#events">Events</a></li>
+          <li><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link" href="#contact">Feedback</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- this is bg-img section -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start"  id="welcome">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to<br><span>The Crown Cafe</span></h1>
+          <div class="btns">
+            <a href="inner-page.html" target="_blank" class="btn-menu animated fadeInUp ">Our Menu</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp ">Book a Table</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section  -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-6 order-1" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+          <div class="about-img">
+            <img src="{% static 'assets/img/bday-cele.jpg' %}" alt="">
+          </div>
+          <div class="about-img">
+            <img src="{% static 'assets/img/IMG-20210217-WA0030.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2  content ">
+          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <p class="fst-italic">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li><i class="bi bi-check-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+            <li><i class="bi bi-check-circle"></i>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+            </li>
+          </ul>
+          <p>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa.`
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Events Section  -->
+  <section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Events</h2>
+      </div>
+      <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="row event-item">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 content">
+                <h3>Birthday Parties</h3>
+                <div class="price">
+                  <p><span>&#8377;189</span></p>
+                </div>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
+                  </li>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                </ul>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row event-item">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 content">
+                <h3>Private Parties</h3>
+                <div class="price">
+                  <p><span>&#8377;290</span></p>
+                </div>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
+                  </li>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                </ul>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="row event-item">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 content">
+                <h3>Custom Parties</h3>
+                <div class="price">
+                  <p><span>$99</span></p>
+                </div>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore
+                  magna aliqua.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
+                  </li>
+                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                </ul>
+                <p>
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Book A Table Section  -->
+  <div class="container" data-aos="fade-up">
+    <section id="book-a-table" class="book-a-table">
+      <div class="section-title">
+        <h2>Book Table</h2>
+      </div>
+
+      <form method="post" action="{% url 'book_table' %}" role="form" class="email-form" data-aos="fade-up" data-aos-delay="100">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+              data-msg="Please enter a valid email"  required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="maxlen:4"
+              data-msg="Please enter at least 4 chars"  required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="time" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="number" class="form-control" name="people" id="people" placeholder="# of people"
+              data-rule="minlen:2" data-msg="Please enter at least 1 chars" required>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div>
+
+        <div class="text-center"><button type="submit">Book a Table</button></div>
+      </form>
+
+  </div>
+  </section>
+
+  <!-- Testimonials Section  -->
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Testimonials</h2>
+      </div>
+
+      <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          {% for d in all_data %}
+          <div  class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                {{d.1}}
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <h3>{{d.0}}</h3>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section  -->
+  <section id="gallery" class="gallery">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Gallery</h2>
+      </div>
+    </div>
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-0">
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href={% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+              <img src="{% static 'assets/img/121729557_201815681337803_1225418751365988583_n.jpg' %}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section  -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Feedback</h2>
+      </div>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Ground floor, Madhav Orchid Odhav
+                <br> Sardar Patel Ring Rd, Ahmedabad,
+                <br>Gujarat 382418
+              </p>
+            </div>
+            <div class="open-hours">
+              <i class="bi bi-clock"></i>
+              <h4>Open Hours:</h4>
+              <p>
+                Monday-Saturday:<br>
+                11:00 AM - 12:00 PM
+              </p>
+            </div>
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>tcc.thecrowncafeandbristro@gmail.com</p>
+            </div>
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+91 88662 91624</p>
+            </div>
+          </div>
+        </div>
+
+  
+
+        
+        <div class="col-lg-8 mt-5 mt-lg-0">
+          <div class="form-group mt-3">
+              <form method="post" role="form" class="email-form" action="{% url 'get_feedback' %}" data-aos="fade-up" data-aos-delay="100">
+                {% csrf_token %}
+              <!-- <div class="row">
+                <div class="col-lg-12">
+                  <div class="star-rating">
+                    <span class="bi bi-star" data-rating="1"></span>
+                    <span class="bi bi-star" data-rating="2"></span>
+                    <span class="bi bi-star" data-rating="3"></span>
+                    <span class="bi bi-star" data-rating="4"></span>
+                    <span class="bi bi-star" data-rating="5"></span>
+                    <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                  </div>
+                  <br>
+                </div>
+              </div> -->
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone number" required>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <textarea class="form-control"   maxlength = "300" name="message" rows="6" placeholder="Message" required></textarea>
+              <span class="pull-right label label-default" id="count_message"></span>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <!-- Footer  -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>the Crown cafe</h3>
+              <p>
+                Ground floor, Madhav Orchid Odhav,<br>
+                Sardar Patel Ring Rd, Ahmedabad, Gujarat 382418<br>
+                <strong>Phone:</strong> +91 88662 91624<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.instagram.com/thecrowncafe_tcc/" class="instagram"><i
+                    class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#book-a-table">book table</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Feedback</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Terms of service">Terms of service</a></li>
+            </ul>
+          </div>
+          <div class="map col-lg-7">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.1636830913453!2d72.66832351444211!3d23.017761522285085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8707d40aad2b%3A0xfe38f0de03490e84!2sThe%20Crown%20Cafe%20-%20Bistro!5e0!3m2!1sen!2sin!4v1642078560558!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+   <!-- Vendor JS Files -->
+   <script src="{% static 'assets/vendor/aos/aos.js'  %}"></script>
+   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'  %}"></script>
+   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'  %}"></script>
+   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'  %}"></script>
+   <script src="{% static 'assets/vendor/php-email-form/validate.js'  %}"></script>
+   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'  %}"></script>
+   <!-- Template Main JS File -->
+   <script src="{% static 'assets/js/main.js'  %}"></script>
+  
+  <script>
+//     var $star_rating = $('.star-rating .bi');
+
+// var SetRatingStar = function() {
+//   return $star_rating.each(function() {
+//     if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
+//       return $(this).removeClass('bi bi-star').addClass('bi bi-star-fill');
+//     } else {
+//       return $(this).removeClass('bi bi-star-fill').addClass('bi bi-star');
+//     }
+//   });
+// };
+
+// $star_rating.on('click', function() {
+//   $star_rating.siblings('input.rating-value').val($(this).data('rating'));
+//   return SetRatingStar();
+// });
+
+// SetRatingStar();
+// $(document).ready(function() {
+
+// });
+
+
+// text area jquery
+
+// var text_max = 250;
+// $('#count_message').html('0 / ' + text_max );
+
+// $('#tar').keyup(function() {
+//   var text_length = $('#tar').val().length;
+//   var text_remaining = text_max - text_length;
+  
+//   $('#count_message').html(text_length + ' / ' + text_max);
+// });
+  </script>
+  
+</body>
+</html>

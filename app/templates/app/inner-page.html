@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>the Crown cafe</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">the Crown cafe</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+          <li><a class="nav-link" href="{% url 'index' %}#about" id="about">About</a></li>
+          <li><a class="nav-link" href="{% url 'index' %}#events">Events</a></li>
+          <li><a class="nav-link" href="{% url 'index' %}#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class=" align-items-center">
+          <section id="menu" class="menu section-bg">
+
+            <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                <h2 class="back-to-menu">Menu</h2>
+              </div>
+              <div class="changing-menu">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-12 d-flex justify-content-center text-capitalize">
+                    <ul id="menu-flters">
+                      <li class="click-bev">beverages</li>
+                      <li class="click-snak">snakes</li>
+                      <li class="click-starter">starter</li>
+                      <li class="click-meals">meal's</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="show_menu">
+
+              </div>
+          </section>
+        </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>the Crown cafe</h3>
+              <p>
+                Ground floor, Madhav Orchid Odhav,<br>
+                Sardar Patel Ring Rd, Ahmedabad, Gujarat 382418<br>
+                <strong>Phone:</strong> +91 00000000<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#About us">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#book table">book table</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#inquiry">inquiry</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Terms of service">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/menu.js' %}"></script>
+ 
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

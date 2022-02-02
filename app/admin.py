@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book_a_table, feedback
+from .models import Book_a_table, feedback, Add_events
 
 
 @admin.register(Book_a_table)
@@ -22,3 +22,16 @@ class Book_a_tableAdmin(admin.ModelAdmin):
 class feedbackAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'Phone', 'feedback')
     search_fields = ('name',)
+
+
+@admin.register(Add_events)
+class Add_eventsAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'Event_Title',
+        'Event_Price',
+        'Event_description',
+        'Event_Image',
+        'date',
+        'Time',
+    )

@@ -21,3 +21,15 @@ class feedback(models.Model):
     class Meta:
         db_table = 'feedback'
 
+class Add_events(models.Model):
+    Event_Title=models.CharField(max_length=100)
+    Event_Price=models.CharField(max_length=100)
+    Event_description=models.TextField()
+    Event_Image=models.FileField(upload_to='app')
+    date=models.TimeField(auto_now=False,default='')
+    Time=models.DateField(auto_now=False,default=' ')
+
+    
+    class Meta:
+        db_table = 'Event-Table'
+    

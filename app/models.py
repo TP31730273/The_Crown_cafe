@@ -1,4 +1,6 @@
+from django import forms
 from django.db import models
+
 
 # Create your models here.
 class Book_a_table(models.Model):
@@ -26,8 +28,8 @@ class Add_events(models.Model):
     Event_Price=models.CharField(max_length=100)
     Event_description=models.TextField()
     Event_Image=models.FileField(upload_to='app')
-    date=models.TimeField(auto_now=False,default='')
-    Time=models.DateField(auto_now=False,default=' ')
+    Time=models.TimeField(auto_now=False)
+    Date=models.DateField(auto_now=False)
 
     
     class Meta:

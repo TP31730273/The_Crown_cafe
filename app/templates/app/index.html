@@ -97,98 +97,36 @@
       <div class="section-title">
         <h2>Events</h2>
       </div>
+    
       <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
+          {% for event in all_events %}
           <div class="swiper-slide">
             <div class="row event-item">
               <div class="col-lg-6">
-                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
+                <img src="{{event.Event_Image.url}}" class="img-fluid" alt="">
               </div>
               <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Birthday Parties</h3>
+                <h3>{{event.Event_Title}}</h3>
                 <div class="price">
-                  <p><span>&#8377;189</span></p>
+                  <p><span>&#8377;{{event.Event_Price}}</span></p>
                 </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
+                <pre class="fst-italic" style="overflow: hidden !important;">
+                  {{event.Event_description}}
+                </pre>
+                
               </div>
+
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Private Parties</h3>
-                <div class="price">
-                  <p><span>&#8377;290</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="{% static 'assets/img/IMG1.jpg' %}" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Custom Parties</h3>
-                <div class="price">
-                  <p><span>$99</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
+          
         </div>
         <div class="swiper-pagination"></div>
       </div>
+    
+
+
     </div>
   </section>
   <!-- Book A Table Section  -->
@@ -385,23 +323,10 @@
 
         
         <div class="col-lg-8 mt-5 mt-lg-0">
-          <div class="form-group mt-3">
+          
               <form method="post" role="form" class="email-form" action="{% url 'get_feedback' %}" data-aos="fade-up" data-aos-delay="100">
                 {% csrf_token %}
-              <!-- <div class="row">
-                <div class="col-lg-12">
-                  <div class="star-rating">
-                    <span class="bi bi-star" data-rating="1"></span>
-                    <span class="bi bi-star" data-rating="2"></span>
-                    <span class="bi bi-star" data-rating="3"></span>
-                    <span class="bi bi-star" data-rating="4"></span>
-                    <span class="bi bi-star" data-rating="5"></span>
-                    <input type="hidden" name="whatever1" class="rating-value" value="2.56">
-                  </div>
-                  <br>
-                </div>
-              </div> -->
-            </div>
+            
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -443,7 +368,7 @@
           </div>
           <div class="col-lg-2 col-md-6 footer-links">
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#welcome">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#Services">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#book-a-table">book table</a></li>

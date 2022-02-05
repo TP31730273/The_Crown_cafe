@@ -32,6 +32,6 @@ class Add_eventsAdmin(admin.ModelAdmin):
         'Event_Price',
         'Event_description',
         'Event_Image',
-        'date',
         'Time',
+        'Date',
     )

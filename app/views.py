@@ -1,4 +1,5 @@
 
+import requests
 from django.shortcuts import redirect, render
 from .models import *
 from django.core.mail import send_mail
@@ -28,6 +29,7 @@ def data(request):
         for j in fb:
             if i == j.Phone:
                 d.append([j.name,j.feedback])
+
 
     show_events(request)
     
